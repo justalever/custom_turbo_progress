@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+input[type="text"],
+textarea {
+  @apply w-full border-2 p-2 rounded-md mb-3;
+}
+
+input[type="submit"] {
+  @apply bg-blue-500 text-white p-2 rounded-md my-2;
+}
+
+/* Basic example
+.turbo-progress-bar {
+  @apply bg-yellow-500 h-6;
+}
+*/
+
+/* Gradient example */
+/* .turbo-progress-bar {
+  @apply bg-gradient-to-r from-yellow-500 to-orange-500 via-red-500 h-6;
+} */
+
+/* Gradient shift example */
+
+/* @keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.turbo-progress-bar {
+  background: linear-gradient(to right, #3498db, #2ecc71, #3498db);
+  background-size: 200% auto;
+  height: 16px;
+  animation: gradient-shift 0.5s linear infinite;
+} */
+
+/* Go fully custom :) */
+/* Requires a markup on the layout with the id "custom-loading-bar"  as well as a the loading_bar_controller.js*/
+
+.turbo-progress-bar {
+  visibility: hidden;
+}
+
+#custom-loading-bar .progress-bar {
+  background: linear-gradient(
+    to right,
+    theme("colors.red.500"),
+    theme("colors.yellow.500"),
+    theme("colors.indigo.500")
+  );
+  background-size: 200% auto;
+  animation: gradient-shift 1s linear infinite;
+
+  transition: width 0.3s;
+  @apply rounded-full h-4 block origin-left;
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
