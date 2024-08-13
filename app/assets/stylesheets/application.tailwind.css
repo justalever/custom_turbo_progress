@@ -22,6 +22,11 @@ input[type="submit"] {
   @apply bg-gradient-to-r from-yellow-500 to-orange-500 via-red-500 h-6;
 } */
 
+/* Glow example */
+/* .turbo-progress-bar {
+  @apply bg-blue-500 h-4 shadow-xl shadow-blue-500/90;
+} */
+
 /* Gradient shift example */
 
 /* @keyframes gradient-shift {

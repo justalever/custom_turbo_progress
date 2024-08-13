@@ -10,7 +10,10 @@ export default class extends Controller {
 
   setupTurboListeners() {
     document.addEventListener("turbo:before-visit", this.showBar.bind(this))
-    document.addEventListener("turbo:visit", this.startProgress.bind(this))
+    document.addEventListener(
+      "turbo:before-fetch-response",
+      this.startProgress.bind(this)
+    )
     document.addEventListener("turbo:load", this.hideBar.bind(this))
   }
 
@@ -43,6 +46,6 @@ export default class extends Controller {
     this.barTarget.style.width = "100%"
     setTimeout(() => {
       this.element.classList.add("hidden")
-    }, 300)
+    }, 3000)
   }
 }
