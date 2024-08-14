@@ -2,7 +2,7 @@
 ![loading-bars-rails](https://github.com/user-attachments/assets/48a75100-b7aa-4a10-92c2-9dbe2edb6b9c)
 
 
-# Custom loading bars with Rails
+# Custom progress bars with Rails
 
 The Turbo Rails progress bar is a subtle yet powerful feature that enhances user experience by providing visual feedback during page loads. 
 
